@@ -83,7 +83,7 @@ module.exports = function (grunt) {
         compress: {
             dist: {
                 options: {
-                    archive: "dist/angular-emoji-HD.zip"
+                    archive: "dist/angular-emoji-hd.zip"
                 },
                 files: [
                     {
