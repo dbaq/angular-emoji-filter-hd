@@ -6,7 +6,7 @@
     "Didier BAQUIER <didier.baquier@gmail.com>"
   ],
   "description": "An AngularJS filter for replacing emoji codes with high-definition emoticons (Retina friendly).",
-  "main": "src/emoji.min.js",
+  "main": ["dist/emoji.min.js", "dist/emoji.min.css"],
   "keywords": [
     "emoji",
     "angular.js"
