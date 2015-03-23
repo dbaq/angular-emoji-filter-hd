@@ -1,31 +1,33 @@
 {
-    "name": "angular-emoji-filter-hd",
-    "version": "0.0.2",
-    "private": true,
-    "author": {
-        "name": "Didier Baquier",
-        "email": "didier.baquier@gmail.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/dbaq/angular-emoji-filter-hd.git"
-    },
-    "bugs": {
-        "url": "https://github.com/dbaq/angular-emoji-filter-hd/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/daq/angular-emoji-filter-hd/blob/master/LICENSE"
-        }
-    ],
-    "devDependencies": {
-        "grunt": "0.4.x",
-        "grunt-contrib-jshint": "0.6.x",
-        "grunt-contrib-uglify": "0.2.x",
-        "grunt-contrib-cssmin": "0.6.x",
-        "grunt-contrib-clean": "0.4.x",
-        "grunt-contrib-copy": "0.4.x",
-        "grunt-contrib-compress": "0.5.x"
-    }
+  "name": "angular-emoji-filter-hd",
+  "version": "0.0.3",
+  "author": "Didier Baquier <didier.baquier@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dbaq/angular-emoji-filter-hd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dbaq/angular-emoji-filter-hd/issues"
+  },
+  "description": "An AngularJS filter for replacing emoji codes with high-definition emoticons (Retina friendly).",
+  "homepage": "https://github.com/dbaq/angular-emoji-filter-hd",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.4.1",
+    "grunt-contrib-clean": "^0.4.1",
+    "grunt-contrib-compress": "^0.5.3",
+    "grunt-contrib-cssmin": "^0.6.2",
+    "grunt-contrib-jshint": "^0.6.5",
+    "grunt-contrib-uglify": "^0.2.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "emoji",
+    "angular",
+    "filter"
+  ],
+  "license": "MIT"
 }
