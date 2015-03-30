@@ -3,17 +3,20 @@
 
 An AngularJS filter for replacing [emoji codes](http://www.emoji-cheat-sheet.com) with actual **high-definition** emoticons (**Retina** friendly). (heavily inspired by [Angular-Emoji-Filter](https://github.com/globaldev/angular-emoji-filter))
 
-Bower
+Installation
 --
-This module is available as bower package, install it with this command:
+This module is available via NPM or bower, install it with this command:
 
-```bash
-bower install angular-emoji-filter-hd
-```
-or
+Via bower
 
 ```bash
 bower install git://github.com/dbaq/angular-emoji-filter-hd.git
+```
+
+Via NPM
+
+```bash
+npm install angular-emoji-filter-hd
 ```
 
 Demo
