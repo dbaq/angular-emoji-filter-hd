@@ -48,16 +48,21 @@ module.exports = function (grunt) {
         },
         copy: {
             max: {
-                files: [
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: [
-                            "lib/*.png"
-                        ],
-                        dest: "dist/"
-                    }
-                ]
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: [
+                        "lib/*.png"
+                    ],
+                    dest: "dist/"
+                }, {
+                    expand: true,
+                    flatten: true,
+                    src: [
+                        "lib/scss/*"
+                    ],
+                    dest: "dist/"
+                }]
             }
         },
         uglify: {
@@ -66,6 +71,17 @@ module.exports = function (grunt) {
                     "dist/emoji.min.js": [
                         "lib/emoji.js"
                     ]
+                }
+            }
+        },
+        sass: {
+            dist: {
+                options: {
+                    style: "compact",
+                    sourcemap: "none"
+                },
+                files: {
+                    "lib/emoji.css": "lib/scss/emoji.scss"
                 }
             }
         },
@@ -80,22 +96,40 @@ module.exports = function (grunt) {
                 ext: ".min.css"
             }
         },
+        replace: { //replace $ by @ for variables in the less file (generated from the sass file)
+            dist: {
+                options: {
+                    prefix: "",
+                    patterns: [{
+                        match: "$emoji-images-path",
+                        replacement: "@emoji-images-path"
+                    }, {
+                        match: " !default;",
+                        replacement: ";"
+                    }]
+                },
+                files: [{
+                    src: ["lib/scss/emoji.scss"],
+                    dest: "dist/emoji.less"
+                }]
+            }
+        },
         compress: {
             dist: {
                 options: {
                     archive: "dist/angular-emoji-hd.zip"
                 },
-                files: [
-                    {
-                        src: [
-                            "dist/*.js",
-                            "dist/*.css",
-                            "dist/*.png",
-                            "LICENSE",
-                            "bower.json"
-                        ]
-                    }
-                ]
+                files: [{
+                    src: [
+                        "dist/*.js",
+                        "dist/*.css",
+                        "dist/*.png",
+                        "dist/*.scss",
+                        "dist/*.less",
+                        "LICENSE",
+                        "bower.json"
+                    ]
+                }]
             }
         }
     });
@@ -104,8 +138,10 @@ module.exports = function (grunt) {
         "jshint",
         "clean:all",
         "uglify",
+        "sass",
         "cssmin",
         "copy",
+        "replace",
         "compress"
     ]);
 
@@ -115,5 +151,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-compress");
+    grunt.loadNpmTasks("grunt-contrib-sass");
+    grunt.loadNpmTasks("grunt-replace");
 
 };
