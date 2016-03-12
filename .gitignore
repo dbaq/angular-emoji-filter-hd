@@ -4,3 +4,4 @@ dist/angular-emoji-hd.zip
 /bower_components
 lib/emoji.css
 .sass-cache
+.idea
