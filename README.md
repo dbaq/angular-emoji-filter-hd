@@ -10,7 +10,7 @@ This module is available via NPM or bower, install it with this command:
 Via bower
 
 ```bash
-bower install git://github.com/dbaq/angular-emoji-filter-hd.git
+bower install angular-emoji-filter-hd
 ```
 
 Via NPM
@@ -21,13 +21,14 @@ npm install angular-emoji-filter-hd
 
 Demo
 --
-See this [plunker](http://embed.plnkr.co/Woxf3rQuLiYWhh7ccvak/preview)
+See this [plunker](http://embed.plnkr.co/iw3XxsD2tHPdWysd1rUm/)
 
 Usage
 --
 - Add dbaq.emoji as a dependency
 - Add ngSanitize as a dependency (belongs to AngularJS)
 - Apply the filter within ng-bind-html: ```<div ng-bind-html="message | emoji"></div>```
+- Optionally add aliases in config blocks via ``` emojiConfigProvider.addAlias("smile", ":)"); ```
 
 Example
 --
@@ -41,15 +42,25 @@ Example
         <script src="emoji.min.js"></script>
     </head>
     <body ng-app="app" ng-controller="AppCtrl">
-        <div ng-bind-html="message | emoji"></div>
+      <ul>
+        <li ng-bind-html="message | emoji"></li>
+        <li ng-bind-html="messageWithAliases | emoji"></li>
+      </ul>
     </body>
 </html>
 ```
- 
+
 ```js
-angular.module("app", ["dbaq.emoji","ngSanitize"]).controller("AppCtrl", function ($scope) {
-    $scope.message = "Animals: :dog: :cat: :snake: People: :smile: :confused: :angry: Places: :house: :school: :hotel: :poop:";
-});
+angular.module("app", ["dbaq.emoji", "ngSanitize"])
+  .config(function(emojiConfigProvider) {
+    emojiConfigProvider.addAlias("smile", ":)");
+    emojiConfigProvider.addAlias("heart", "<3");
+    emojiConfigProvider.addAlias("ok_hand", "+1");
+  })
+  .controller("AppCtrl", function ($scope) {
+      $scope.message = "Animals: :dog: :cat: :snake: People: :smile: :confused: :angry: Places: :house: :school: :hotel: :poop:";
+      $scope.messageWithAliases = "Emoji with aliases: :) <3 +1";
+  });});
 ```
 
 
