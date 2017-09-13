@@ -1,5 +1,5 @@
 # AngularJS Emoji Filter HD
-=========
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/nnq4YKjaFeDVYQrFbBYw4qNV/dbaq/angular-emoji-filter-hd'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/nnq4YKjaFeDVYQrFbBYw4qNV/dbaq/angular-emoji-filter-hd.svg' /></a>
 
 An AngularJS filter for replacing [emoji codes](http://www.emoji-cheat-sheet.com) with actual **high-definition** emoticons (**Retina** friendly). (heavily inspired by [Angular-Emoji-Filter](https://github.com/globaldev/angular-emoji-filter))
 
