@@ -1,6 +1,4 @@
 # AngularJS Emoji Filter HD
-<a target='_blank' href='https://app.codesponsor.io/link/nnq4YKjaFeDVYQrFbBYw4qNV/dbaq/angular-emoji-filter-hd'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/nnq4YKjaFeDVYQrFbBYw4qNV/dbaq/angular-emoji-filter-hd.svg' /></a>
-
 An AngularJS filter for replacing [emoji codes](http://www.emoji-cheat-sheet.com) with actual **high-definition** emoticons (**Retina** friendly). (heavily inspired by [Angular-Emoji-Filter](https://github.com/globaldev/angular-emoji-filter))
 
 Installation
@@ -68,10 +66,6 @@ angular.module("app", ["dbaq.emoji", "ngSanitize"])
 If your app is successful or if you are working for a company, please consider donating some beer money :beer::
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/dbaq/10)
-
-Or visit our sponsor:
-
-<a target='_blank' href='https://app.codesponsor.io/link/nnq4YKjaFeDVYQrFbBYw4qNV/dbaq/angular-emoji-filter-hd'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/nnq4YKjaFeDVYQrFbBYw4qNV/dbaq/angular-emoji-filter-hd.svg' /></a>
 
 Keep in mind that I am maintaining this repository on my free time so thank you for considering a donation. :+1:
 
